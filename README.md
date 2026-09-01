@@ -1,5 +1,3 @@
-# gdp-g7-brics-race
-Pipeline em Python que transforma dados brutos do World Bank em dataset pronto para bar chart race no Flourish — comparação do PIB nominal G7 vs BRICS (1970-presente).
 # PIB Nominal: G7 vs BRICS (1970–presente)
 
 Pipeline de preparação de dados que transforma a série histórica de PIB nominal do Banco Mundial em um dataset pronto para visualização em corrida de barras (bar chart race) no Flourish.
