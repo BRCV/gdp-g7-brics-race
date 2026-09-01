@@ -58,7 +58,7 @@ Cada script gera seu respectivo CSV, que pode ser importado diretamente em um te
 
 - Visualização publicada no Flourish: *[[link aqui](https://public.flourish.studio/visualisation/29835010/)]*
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - Python (pandas)
 - Flourish Studio (visualização)
