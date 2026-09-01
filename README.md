@@ -56,7 +56,7 @@ Cada script gera seu respectivo CSV, que pode ser importado diretamente em um te
 
 ## Resultado
 
-- Visualização publicada no *[[Flourish](https://public.flourish.studio/visualisation/29835010/)]*
+- Visualização publicada no [Flourish](https://public.flourish.studio/visualisation/29835010/)
 
 ## Tecnologias
 
