@@ -13,9 +13,11 @@ Comparar a evolução do PIB nominal (em US\$ trilhões) dos países do **G7** e
 - **World Bank Open Data** — indicador [GDP (current US\$)](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
 - Arquivo baixado diretamente do site do Banco Mundial em formato CSV (`gdp_nominal.csv`), incluindo os metadados padrão que o World Bank adiciona nas primeiras linhas do arquivo.
 
-## ⚙️ O que o script faz
+## ⚙️ O que os scripts fazem
 
-O `prepare_data.py` recebe o CSV bruto do World Bank e devolve um CSV já formatado para o Flourish, com:
+Há duas versões do mesmo pipeline — uma em português (`gerar_gdp_flourish.py`) e uma em inglês (`gerar_gdp_english.py`), usadas respectivamente para o público brasileiro e para o canal internacional. A lógica é idêntica; muda apenas o idioma dos rótulos gerados no CSV final.
+
+Cada script recebe o CSV bruto do World Bank e devolve um CSV já formatado para o Flourish, com:
 
 1. **Filtragem dos países-alvo**: os 7 membros do G7 e os 9 membros atuais dos BRICS (incluindo a expansão de 2024 — Egito, Etiópia, Irã e Emirados Árabes Unidos).
 2. **Seleção do período**: apenas dados a partir de 1970.
@@ -28,19 +30,25 @@ O `prepare_data.py` recebe o CSV bruto do World Bank e devolve um CSV já format
 ```
 📁 gdp-g7-brics-race/
 ├── README.md
-├── prepare_data.py          # script de preparação dos dados
-├── gdp_nominal.csv          # dado bruto original (World Bank)
-└── flourish_gdp_brics_vs_g7_en.csv   # saída processada, pronta para o Flourish
+├── gerar_gdp_flourish.py              # script de preparação — versão em português
+├── gerar_gdp_english.py               # script de preparação — versão em inglês
+├── flourish_gdp_brics_vs_g7.csv       # saída processada (PT), pronta para o Flourish
+└── flourish_gdp_brics_vs_g7_en.csv    # saída processada (EN), pronta para o Flourish
 ```
 
 ## ▶️ Como rodar
 
 ```bash
 pip install pandas
-python prepare_data.py
+
+# versão em português
+python gerar_gdp_flourish.py
+
+# versão em inglês
+python gerar_gdp_english.py
 ```
 
-O script gera o arquivo `flourish_gdp_brics_vs_g7_en.csv`, que pode ser importado diretamente em um template de **Bar Chart Race** no [Flourish Studio](https://flourish.studio/).
+Cada script gera seu respectivo CSV, que pode ser importado diretamente em um template de **Bar Chart Race** no [Flourish Studio](https://flourish.studio/).
 
 ## 🔑 Principais decisões técnicas
 
@@ -50,10 +58,7 @@ O script gera o arquivo `flourish_gdp_brics_vs_g7_en.csv`, que pode ser importad
 
 ## 📺 Resultado
 
-- Visualização publicada no Flourish: *[link aqui]*
-- Versão em vídeo (com trilha sonora, formato usado no meu canal do YouTube): *[link aqui]*
-
-Também existe uma versão do script com rótulos e categorias em português, usada para o público brasileiro do canal.
+- Visualização publicada no Flourish: *[[link aqui](https://public.flourish.studio/visualisation/29835010/)]*
 
 ## 🛠️ Tecnologias
 
